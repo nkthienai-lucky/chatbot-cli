@@ -42,18 +42,22 @@ python chat.py --system "Bạn là cướp biển"      # đổi persona
 python chat.py --model qwen3.5:9b               # override model
 ```
 
-## 🌐 Demo web (Gradio + HF Spaces)
+## 🌐 Demo web (Gradio)
 
 ```bash
 python app.py           # chạy local tại http://127.0.0.1:7860
 ```
 
-Deploy lên Hugging Face Spaces:
+Deploy public (Render free — xem `render.yaml`):
 
-1. Tạo Space mới (SDK **Gradio**, public), đẩy code project này lên.
-2. Vào **Settings → Secrets** của Space, thêm `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`
-   (Space không chạy được Ollama local → phải trỏ tới API thật).
-3. Space build xong → lấy **URL public** gửi cho bạn bè.
+1. Đẩy project lên GitHub (Render/Koyeb deploy qua kết nối Git — không upload trực tiếp được).
+2. Tạo **Web Service** trên [render.com](https://render.com) → kết nối repo → Render tự đọc `render.yaml`.
+3. Vào **Environment** của service, đặt `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`
+   (secret **không** commit; server không chạy được Ollama local → trỏ tới API thật).
+4. Deploy xong → lấy **URL public** gửi cho bạn bè.
+
+> Lưu ý: HF Spaces (chọn gốc của spec GĐ1) đã chặn Space Gradio trên free tier từ 2026
+> (cần HF Pro) → đổi sang Render free, cùng code, chỉ đổi nền tảng.
 
 ## 📸 Screenshot
 
