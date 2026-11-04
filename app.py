@@ -23,7 +23,6 @@ demo = gr.ChatInterface(
     respond,
     title="Chatbot GĐ1",
     description="Chatbot streaming — demo project GĐ1 (AI Engineer Roadmap).",
-    type="messages",
 )
 
 if __name__ == "__main__":
