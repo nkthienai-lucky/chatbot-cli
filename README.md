@@ -61,6 +61,9 @@ Deploy public (Render free — xem `render.yaml`):
 
 ## 📸 Screenshot
 
+> 🟢 **Demo live: https://chatbot-cli.onrender.com/** — mở là chat được ngay.
+> (Ảnh chụp UI sẽ được bổ sung; server free sleep sau ~15 phút không dùng — lần mở đầu chờ ~50s.)
+
 ```
 $ python chat.py
 [backend: http://localhost:11434/v1 | model: qwen3.5:9b]
@@ -80,9 +83,9 @@ Bot: Tên của bạn là **Nam** ạ! Tôi đã nhớ rõ rồi đấy, Nam ơi
 - [x] Đổi model/backend không sửa code logic (chỉ đổi env var)
 - [x] System prompt tùy chỉnh (`LLM_SYSTEM` / `--system`)
 - [x] Lịch sử hội thoại giữ đúng ("câu trước tôi hỏi gì?")
-- [ ] Demo URL hoạt động, gửi được cho bạn bè xem *(sau khi deploy)*
+- [x] Demo URL hoạt động, gửi được cho bạn bè xem — **https://chatbot-cli.onrender.com/** (đã test API trả lời đúng qua URL public)
 - [x] README có hướng dẫn chạy
-- [ ] Ảnh screenshot UI demo *(sau khi deploy)*
+- [ ] Ảnh chụp UI demo *(bổ sung sau — demo đã live)*
 - [x] Không hard-code API key (key chỉ nằm trong `.env` gitignored / HF Secrets)
 
 ## 📁 Cấu trúc
